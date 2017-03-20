@@ -1,0 +1,14 @@
+127.0.0.1 - - [08/Feb/2016:12:05:42 +0000] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:05:44 +0000] "GET /SportingGoods/WEB-INF/index.jsp HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:08:18 +0000] "GET /SportingGoods/WEB-INF/index.jsp HTTP/1.1" 404 992
+127.0.0.1 - - [08/Feb/2016:12:11:50 +0000] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:11:51 +0000] "GET /FinalProjectSportingGoods/WEB-INF/index.jsp HTTP/1.1" 404 992
+127.0.0.1 - - [08/Feb/2016:12:12:33 +0000] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:12:33 +0000] "GET /FinalProjectSportingGoods/WEB-INF/index1.jsp HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:13:57 +0000] "GET /FinalProjectSportingGoods/WEB-INF/index1.jsp HTTP/1.1" 404 992
+127.0.0.1 - - [08/Feb/2016:12:17:26 +0000] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:17:26 +0000] "GET /FinalProjectSportingGoods/WEB-INF/NewFile.jsp HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:17:49 +0000] "GET /FinalProjectSportingGoods/WebContent/WEB-INF/NewFile.jsp HTTP/1.1" 404 1106
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:18:00 +0000] "GET /FinalProjectSportingGoods/WEB-INF/NewFile.jsp HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:19:28 +0000] "GET /FinalProjectSportingGoods/WEB-INF/index.jsp HTTP/1.1" 404 992
+0:0:0:0:0:0:0:1 - - [08/Feb/2016:12:20:25 +0000] "GET /FinalProjectSportingGoods/WEB-INF/index.jsp HTTP/1.1" 404 992

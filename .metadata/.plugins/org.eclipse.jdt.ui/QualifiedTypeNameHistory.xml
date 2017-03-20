@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="model.cart"/>
+<fullyQualifiedTypeName name="dao.cartDAO"/>
+<fullyQualifiedTypeName name="model.Cart"/>
+<fullyQualifiedTypeName name="dao.productDAO"/>
+<fullyQualifiedTypeName name="model.category"/>
+<fullyQualifiedTypeName name="dao.categoryDAO"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="dao.orderDAO"/>
+<fullyQualifiedTypeName name="java.sql.Blob"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+<fullyQualifiedTypeName name="javax.websocket.Decoder.Binary"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+<fullyQualifiedTypeName name="model.Order"/>
+<fullyQualifiedTypeName name="dao.OrderDAO"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.FileItem"/>
+<fullyQualifiedTypeName name="model.ChatConstants"/>
+<fullyQualifiedTypeName name="model.ChatState"/>
+<fullyQualifiedTypeName name="main.MyException"/>
+<fullyQualifiedTypeName name="main.LeiDB"/>
+<fullyQualifiedTypeName name="model.Reply"/>
+<fullyQualifiedTypeName name="dao.CommentDAO"/>
+<fullyQualifiedTypeName name="model.Comment"/>
+<fullyQualifiedTypeName name="dao.ReplyDAO"/>
+<fullyQualifiedTypeName name="dao.ProductDAO"/>
+<fullyQualifiedTypeName name="model.Product"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.disk.DiskFileItemFactory"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.servlet.ServletFileUpload"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.apache.commons.fileupload.FileItem"/>
+</qualifiedTypeNameHistroy>

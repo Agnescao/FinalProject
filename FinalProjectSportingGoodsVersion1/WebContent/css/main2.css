@@ -1,0 +1,134 @@
+html {
+	background-image: url("../images/bats.gif");	
+}
+body  {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	width: 800px;
+	background-color: white;
+	margin: 0 auto; 
+	padding: 0;
+	border: 3px solid black;
+	box-shadow: 0 9px 18px 9px;
+}
+h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+a {
+	font-weight: bold;
+	color: orange;
+}
+a:link, a:visited { 
+    color: orange; 
+}
+a:hover, a:focus { 
+    color: green;
+}
+
+/* Header */
+header { 
+    background-image: -webkit-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: -moz-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: -o-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    padding: 0 ; 
+    border-bottom: 0.5px solid black; 
+} 
+header img { 
+	float: left; 
+	padding: 15px;  
+} 
+header h2 {
+	padding:15px;
+	font-size: 230%;
+}
+header h3 {
+	padding:0 15px 0 15px;
+	font-size: 125%;
+}
+
+
+#nav_bar ul {
+list-style: none;
+padding: .5em 0;
+border-top: 0.5px solid black;
+text-align:center;
+/*border-bottom: 2px solid black;*/ }
+#nav_bar li {
+display: inline;
+padding: 0 1em;
+border-right: 2px solid black; }
+#nav_bar a {
+font-weight: bold;
+color: black; }
+#nav_bar a.current { color: text-decoration: none; }
+
+
+
+
+
+#nav_list ul {
+list-style: none;
+margin-left: 0.5em;
+margin-bottom: 1.5em; }
+#nav_list li {
+width: 110px;
+margin-bottom: .5em;
+border: 2px solid black; }
+#nav_list li a {
+display: block;
+padding: .5em 0 .5em 1em;
+text-decoration: none;
+font-weight: bold;
+color: black;
+background-color:orange;
+ }
+/*#nav_list a.current {
+background-color: silver; }*/
+
+
+aside{
+	width:160px;
+	float:left;
+	margin-top:20px;
+}
+/* section */
+section{
+	padding: 20px 25px 25px 25px;
+	width:580px;
+	float:right;
+}
+section h1 { 
+	font-size: 140%;
+	margin-bottom: .5em;
+}
+section h1:first-letter { 
+	font-size: 240%;
+}
+section h2 {
+	font-size: 125%;
+	margin: .8em 0 .5em 0;
+}
+section h3 {
+	font-size: 110%;
+	margin-bottom: .5em;
+}
+section p {
+	margin-bottom: .5em;
+}
+
+
+/* Footer */
+footer { 
+    clear:both;
+	border-top: 2px solid black;
+	padding: 15px;
+    background-image: -webkit-linear-gradient(45deg, black 0%, orange 25%, white 100%);
+    background-image: -moz-linear-gradient(45deg, black 0%, orange 25%, white 100%);
+    background-image: -o-linear-gradient(45deg, black 0%, orange 25%, white 100%);
+    background-image: linear-gradient(45deg, black 0%, orange 25%, white 100%);
+} 
+footer p {
+	font-size: 90%;
+	text-align: center;
+}

@@ -1,0 +1,6 @@
+1457247762753	Move 'web.xml' to 'WEB-INF'
+1457352820179	Rename type 'orderDAO'
+1457352850275	Rename type 'categoryDAO'
+1457352871634	Rename type 'productDAO'
+1457352904881	Rename type 'category'
+1457352920466	Rename type 'order'

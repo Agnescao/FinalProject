@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;manageDB.xml&apos; to &apos;fangliA00227210/src/controllers&apos;&#x0D;&#x0A;- Original project: &apos;fangliA00227210&apos;&#x0D;&#x0A;- Destination element: &apos;fangliA00227210/src/controllers&apos;&#x0D;&#x0A;- Original element: &apos;manageDB.xml&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" destination="/src&lt;controllers" element1="db/manageDB.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1459163360526" units="0" version="1.0"/>
+</session>

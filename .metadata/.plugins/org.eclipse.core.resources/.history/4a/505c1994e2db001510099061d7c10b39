@@ -1,0 +1,43 @@
+package dao;
+
+import java.sql.Connection;
+
+
+
+import java.sql.PreparedStatement;
+
+import model.order;
+
+public enum cartDAO {
+	instance;
+	 public Connection connection = null;
+		private void closeCon(){
+			try{
+				if(connection!=null){
+					connection.close();
+					connection=null;
+				}
+			}catch(Exception e){
+				
+			}
+		}
+		public void addtocart(order order) {
+			  Connection connection = Utils.getConnection();
+			  
+			  try {
+			      PreparedStatement psmt = connection
+			          .prepareStatement("INSERT INTO customer_order (Amount, , email,phone,address,city_region) VALUES (?, ?, ?,?,?,?)");
+			      psmt.setString(1, user.getName());
+			      psmt.setString(2, user.getPassword());
+			      psmt.setString(3, user.getEmail());
+			      psmt.setString(4, user.getPhone());
+			      psmt.setString(5, user.getAddress());
+			      psmt.setString(6, user.getCity());
+
+			      psmt.executeUpdate();
+			    } catch (SQLException e) {
+			      e.printStackTrace();
+			  
+		}
+
+}

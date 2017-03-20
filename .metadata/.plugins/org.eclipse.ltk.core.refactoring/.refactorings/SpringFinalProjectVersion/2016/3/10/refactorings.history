@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SpringFinalProjectVersion/WebContent/WEB-INF/contextConfigLocation.xml&apos; to &apos;applicationContext.xml&apos;" description="Rename resource &apos;contextConfigLocation.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/contextConfigLocation.xml" name="applicationContext.xml" stamp="1457208980184" updateReferences="true"/>&#x0A;&#x0A;</session>

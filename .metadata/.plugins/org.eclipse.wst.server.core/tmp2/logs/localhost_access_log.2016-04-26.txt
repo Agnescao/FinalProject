@@ -1,0 +1,6 @@
+127.0.0.1 - - [26/Apr/2016:18:42:17 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [26/Apr/2016:18:42:21 +0100] "GET /FinalProjectSportingGood-v1/ HTTP/1.1" 200 3513
+0:0:0:0:0:0:0:1 - - [26/Apr/2016:18:42:22 +0100] "GET /FinalProjectSportingGood-v1/imageproduct/indexP.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [26/Apr/2016:18:42:28 +0100] "GET /FinalProjectSportingGood-v1/register.jsp HTTP/1.1" 200 2429
+0:0:0:0:0:0:0:1 - - [26/Apr/2016:18:42:28 +0100] "GET /FinalProjectSportingGood-v1/js/ajax.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [26/Apr/2016:18:42:39 +0100] "GET /FinalProjectSportingGood-v1/exist.jsp?username=Lei HTTP/1.1" 200 29

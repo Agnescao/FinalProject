@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?><?dbhtml 
+			graphics-dir="../dbhtml/graphics/" 
+			css-stylesheet-dir="../dbhtml/browser/"
+			script-dir="../dbhtml/browser/"
+		?>
+<slides>
+   <slidesinfo>
+      <title/>
+   </slidesinfo>
+   <foil>
+      <title>../WebContent/index.jsp</title>
+      <programlisting>&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"&#xD;
+    pageEncoding="ISO-8859-1"%&gt;&#xD;
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%&gt;&#xD;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&#xD;
+&lt;html&gt;&#xD;
+&lt;head&gt;&#xD;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;&#xD;
+&lt;title&gt;Say Hello Form&lt;/title&gt;&#xD;
+&lt;/head&gt;&#xD;
+&lt;body&gt;&#xD;
+&#xD;
+&lt;body&gt;&#xD;
+&lt;h2&gt;Welcome&lt;/h2&gt;&#xD;
+&#xD;
+Current user: &lt;c:out value="${sessionScope.user.name}"/&gt; &lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+&lt;a href="register.jsp"&gt; Register&lt;/a&gt; &lt;br&gt;&#xD;
+&lt;a href="login.jsp"&gt; Login&lt;/a&gt;&lt;br&gt;&#xD;
+&lt;a href="LogoutServlet"&gt; Logout&lt;/a&gt;&lt;br&gt;&#xD;
+&#xD;
+&lt;/body&gt;&#xD;
+&#xD;
+&lt;/body&gt;&#xD;
+&lt;/html&gt;</programlisting>
+   </foil>
+   <foil>
+      <title>../src/model/User.java</title>
+      <programlisting>package model;&#xD;
+&#xD;
+import java.sql.SQLException;&#xD;
+import java.sql.Statement;&#xD;
+&#xD;
+public class User  {&#xD;
+  private int id ;&#xD;
+	private String name ;&#xD;
+	private String password ;&#xD;
+	private String address ;&#xD;
+	&#xD;
+	public User(int id, String name, String password, String address) {&#xD;
+	  this.id = id ;&#xD;
+    this.name = name;&#xD;
+    this.password = password ;&#xD;
+    this.address = address;&#xD;
+  }&#xD;
+	&#xD;
+	public User(String name, String password, String address) {&#xD;
+		this.name = name;&#xD;
+		this.password = password ;&#xD;
+		this.address = address;&#xD;
+	}&#xD;
+&#xD;
+	&#xD;
+	public int getId() {&#xD;
+    return id;&#xD;
+  }&#xD;
+&#xD;
+&#xD;
+  public void setId(int id) {&#xD;
+    this.id = id;&#xD;
+  }&#xD;
+&#xD;
+&#xD;
+  public String getName() {&#xD;
+		return name;&#xD;
+	}&#xD;
+&#xD;
+	public void setName(String name) {&#xD;
+		this.name = name;&#xD;
+	}&#xD;
+&#xD;
+	public String getAddress() {&#xD;
+		return address;&#xD;
+	}&#xD;
+&#xD;
+	public void setAddress(String address) {&#xD;
+		this.address = address;&#xD;
+	}&#xD;
+&#xD;
+	public String getPassword() {&#xD;
+		return password;&#xD;
+	}&#xD;
+&#xD;
+	public void setPassword(String password) {&#xD;
+		this.password = password;&#xD;
+	}&#xD;
+	&#xD;
+	&#xD;
+}</programlisting>
+   </foil>
+   <foil>
+      <title>../src/dao/UserDAO.java</title>
+      <programlisting>package dao;&#xD;
+&#xD;
+import java.sql.Connection;&#xD;
+import java.sql.DriverManager;&#xD;
+import java.sql.PreparedStatement;&#xD;
+import java.sql.ResultSet;&#xD;
+import java.sql.SQLException;&#xD;
+import java.sql.Statement;&#xD;
+&#xD;
+import model.User;&#xD;
+&#xD;
+public enum UserDAO {&#xD;
+  instance;&#xD;
+&#xD;
+  public Connection getConnection() {&#xD;
+&#xD;
+    Connection connection = null;&#xD;
+    try {&#xD;
+      Class.forName("org.hsqldb.jdbcDriver");&#xD;
+      connection = DriverManager.getConnection(&#xD;
+          "jdbc:hsqldb:hsql://localhost/oneDB", "sa", "");&#xD;
+    } catch (Exception e) {&#xD;
+      e.printStackTrace();&#xD;
+    }&#xD;
+    return connection;&#xD;
+  }&#xD;
+&#xD;
+  public void save(User user) {&#xD;
+    Connection connection = getConnection();&#xD;
+&#xD;
+    try {&#xD;
+      PreparedStatement psmt = connection&#xD;
+          .prepareStatement("INSERT INTO USER (name, password, address) VALUES (?, ?, ?)");&#xD;
+      psmt.setString(1, user.getName());&#xD;
+      psmt.setString(2, user.getPassword());&#xD;
+      psmt.setString(3, user.getAddress());&#xD;
+&#xD;
+      psmt.executeUpdate();&#xD;
+    } catch (SQLException e) {&#xD;
+      e.printStackTrace();&#xD;
+    }&#xD;
+  }&#xD;
+&#xD;
+  public User checkLogin(String name, String password) {&#xD;
+    Connection connection = getConnection();&#xD;
+    User user = null ;&#xD;
+&#xD;
+    try {&#xD;
+      PreparedStatement psmt = connection&#xD;
+          .prepareStatement("SELECT * FROM USER WHERE NAME = ? AND PASSWORD = ?");&#xD;
+      psmt.setString(1, name);&#xD;
+      psmt.setString(2, password);&#xD;
+      ResultSet rs = psmt.executeQuery();&#xD;
+      if (rs.next()) {&#xD;
+        user = new User(rs.getInt("id"), rs.getString("name"), rs.getString("password"), rs.getString("address")) ;&#xD;
+      }&#xD;
+    } catch (SQLException e) {&#xD;
+      e.printStackTrace();&#xD;
+    }&#xD;
+    return user ;&#xD;
+  }&#xD;
+&#xD;
+}</programlisting>
+   </foil>
+   <foil>
+      <title>../WebContent/index.jsp</title>
+      <programlisting>&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"&#xD;
+    pageEncoding="ISO-8859-1"%&gt;&#xD;
+&lt;%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%&gt;&#xD;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&#xD;
+&lt;html&gt;&#xD;
+&lt;head&gt;&#xD;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;&#xD;
+&lt;title&gt;Say Hello Form&lt;/title&gt;&#xD;
+&lt;/head&gt;&#xD;
+&lt;body&gt;&#xD;
+&#xD;
+&lt;body&gt;&#xD;
+&lt;h2&gt;Welcome&lt;/h2&gt;&#xD;
+&#xD;
+Current user: &lt;c:out value="${sessionScope.user.name}"/&gt; &lt;br&gt;&#xD;
+&lt;br&gt;&#xD;
+&lt;a href="register.jsp"&gt; Register&lt;/a&gt; &lt;br&gt;&#xD;
+&lt;a href="login.jsp"&gt; Login&lt;/a&gt;&lt;br&gt;&#xD;
+&lt;a href="LogoutServlet"&gt; Logout&lt;/a&gt;&lt;br&gt;&#xD;
+&#xD;
+&lt;/body&gt;&#xD;
+&#xD;
+&lt;/body&gt;&#xD;
+&lt;/html&gt;</programlisting>
+   </foil>
+   <foil>
+      <title>../WebContent/register.jsp</title>
+      <programlisting>&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"&#xD;
+	pageEncoding="ISO-8859-1"%&gt;&#xD;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&#xD;
+&lt;html&gt;&#xD;
+&lt;head&gt;&#xD;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;&#xD;
+&lt;title&gt;Register&lt;/title&gt;&#xD;
+&lt;/head&gt;&#xD;
+&lt;body&gt;&#xD;
+&lt;body&gt;&#xD;
+	&lt;h2&gt;Register&lt;/h2&gt;&#xD;
+&#xD;
+	&lt;form method="post" action="RegisterServlet"&gt;&#xD;
+		Enter name: &lt;input type="text" name="name"&gt; &lt;br&gt;&#xD;
+		&#xD;
+		Enter password: &lt;input type="text" name="password"&gt; &lt;br&gt;&#xD;
+		&#xD;
+		Enter address: &lt;input type="text" name="address"&gt; &lt;br&gt;&#xD;
+		&#xD;
+		&lt;input type="submit" value="register"&gt;&#xD;
+	&lt;/form&gt;&#xD;
+&#xD;
+&lt;/body&gt;&#xD;
+&#xD;
+&lt;/body&gt;&#xD;
+&lt;/html&gt;</programlisting>
+   </foil>
+   <foil>
+      <title>../src/controllers/RegisterServlet.java</title>
+      <programlisting>package controllers;&#xD;
+&#xD;
+import java.io.IOException;&#xD;
+&#xD;
+import javax.servlet.ServletException;&#xD;
+import javax.servlet.annotation.WebServlet;&#xD;
+import javax.servlet.http.HttpServlet;&#xD;
+import javax.servlet.http.HttpServletRequest;&#xD;
+import javax.servlet.http.HttpServletResponse;&#xD;
+&#xD;
+import model.User;&#xD;
+import dao.UserDAO;&#xD;
+&#xD;
+/**&#xD;
+ * Servlet implementation class HelloControllerServlet&#xD;
+ */&#xD;
+@WebServlet("/RegisterServlet")&#xD;
+public class RegisterServlet extends HttpServlet {&#xD;
+	private static final long serialVersionUID = 1L;&#xD;
+       &#xD;
+    /**&#xD;
+     * @see HttpServlet#HttpServlet()&#xD;
+     */&#xD;
+    public RegisterServlet() {&#xD;
+        super();&#xD;
+        // TODO Auto-generated constructor stub&#xD;
+    }&#xD;
+&#xD;
+	/**&#xD;
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)&#xD;
+	 */&#xD;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {&#xD;
+		// TODO Auto-generated method stub&#xD;
+	}&#xD;
+&#xD;
+	/**&#xD;
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)&#xD;
+	 */&#xD;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {&#xD;
+		String name = request.getParameter("name") ;&#xD;
+		String password = request.getParameter("password") ;&#xD;
+		String address = request.getParameter("address") ;&#xD;
+		User user = new User (name, password, address) ;&#xD;
+		UserDAO.instance.save(user) ;&#xD;
+&#xD;
+		request.getRequestDispatcher("index.jsp").forward(request, response);		&#xD;
+	}&#xD;
+&#xD;
+}</programlisting>
+   </foil>
+   <foil>
+      <title>../WebContent/login.jsp</title>
+      <programlisting>&lt;%@ page language="java" contentType="text/html; charset=ISO-8859-1"&#xD;
+	pageEncoding="ISO-8859-1"%&gt;&#xD;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;&#xD;
+&lt;html&gt;&#xD;
+&lt;head&gt;&#xD;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;&#xD;
+&lt;title&gt;Login&lt;/title&gt;&#xD;
+&lt;/head&gt;&#xD;
+&lt;body&gt;&#xD;
+&lt;body&gt;&#xD;
+	&lt;h2&gt;Login&lt;/h2&gt;&#xD;
+&#xD;
+	&lt;form method="post" action="LoginServlet"&gt;&#xD;
+		Enter name: &lt;input type="text" name="name"&gt; &lt;br&gt;&#xD;
+		&#xD;
+		Enter password: &lt;input type="password" name="password"&gt; &lt;br&gt;&#xD;
+			&#xD;
+		&lt;input type="submit" value="login"&gt;&#xD;
+	&lt;/form&gt;&#xD;
+&#xD;
+&lt;/body&gt;&#xD;
+&#xD;
+&lt;/body&gt;&#xD;
+&lt;/html&gt;</programlisting>
+   </foil>
+   <foil>
+      <title>../src/controllers/LoginServlet.java</title>
+      <programlisting>package controllers;&#xD;
+&#xD;
+import java.io.IOException;&#xD;
+&#xD;
+import javax.servlet.ServletException;&#xD;
+import javax.servlet.annotation.WebServlet;&#xD;
+import javax.servlet.http.HttpServlet;&#xD;
+import javax.servlet.http.HttpServletRequest;&#xD;
+import javax.servlet.http.HttpServletResponse;&#xD;
+import javax.servlet.http.HttpSession;&#xD;
+&#xD;
+import model.User;&#xD;
+import dao.UserDAO;&#xD;
+&#xD;
+/**&#xD;
+ * Servlet implementation class HelloControllerServlet&#xD;
+ */&#xD;
+@WebServlet("/LoginServlet")&#xD;
+public class LoginServlet extends HttpServlet {&#xD;
+   private static final long serialVersionUID = 1L;&#xD;
+&#xD;
+   /**&#xD;
+    * @see HttpServlet#HttpServlet()&#xD;
+    */&#xD;
+   public LoginServlet() {&#xD;
+      super();&#xD;
+      // TODO Auto-generated constructor stub&#xD;
+   }&#xD;
+&#xD;
+   /**&#xD;
+    * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse&#xD;
+    *      response)&#xD;
+    */&#xD;
+   protected void doGet(HttpServletRequest request, HttpServletResponse response)&#xD;
+         throws ServletException, IOException {&#xD;
+      // TOD&#xD;
+   }&#xD;
+&#xD;
+   /**&#xD;
+    * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse&#xD;
+    *      response)&#xD;
+    */&#xD;
+   protected void doPost(HttpServletRequest request,&#xD;
+         HttpServletResponse response) throws ServletException, IOException {&#xD;
+      String name = request.getParameter("name");&#xD;
+      String password = request.getParameter("password");&#xD;
+      User user = UserDAO.instance.checkLogin(name, password);&#xD;
+      if (user != null) {&#xD;
+         HttpSession session = request.getSession();&#xD;
+         session.setAttribute("user", user);&#xD;
+         request.getRequestDispatcher("index.jsp").forward(request, response);&#xD;
+      } else {&#xD;
+         request.getRequestDispatcher("login.jsp").forward(request, response);&#xD;
+      }&#xD;
+   }&#xD;
+&#xD;
+}</programlisting>
+   </foil>
+   <foil>
+      <title>../src/controllers/LogoutServlet.java</title>
+      <programlisting>package controllers;&#xD;
+&#xD;
+import java.io.IOException;&#xD;
+&#xD;
+import javax.servlet.ServletException;&#xD;
+import javax.servlet.annotation.WebServlet;&#xD;
+import javax.servlet.http.HttpServlet;&#xD;
+import javax.servlet.http.HttpServletRequest;&#xD;
+import javax.servlet.http.HttpServletResponse;&#xD;
+import javax.servlet.http.HttpSession;&#xD;
+&#xD;
+import model.User;&#xD;
+import dao.UserDAO;&#xD;
+&#xD;
+/**&#xD;
+ * Servlet implementation class HelloControllerServlet&#xD;
+ */&#xD;
+@WebServlet("/LogoutServlet")&#xD;
+public class LogoutServlet extends HttpServlet {&#xD;
+   private static final long serialVersionUID = 1L;&#xD;
+&#xD;
+   /**&#xD;
+    * @see HttpServlet#HttpServlet()&#xD;
+    */&#xD;
+   public LogoutServlet() {&#xD;
+      super();&#xD;
+      // TODO Auto-generated constructor stub&#xD;
+   }&#xD;
+&#xD;
+   /**&#xD;
+    * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse&#xD;
+    *      response)&#xD;
+    */&#xD;
+   protected void doGet(HttpServletRequest request, HttpServletResponse response)&#xD;
+         throws ServletException, IOException {&#xD;
+      HttpSession session = request.getSession();&#xD;
+      session.setAttribute("user", null);&#xD;
+      request.getRequestDispatcher("index.jsp").forward(request, response);&#xD;
+   }&#xD;
+&#xD;
+   /**&#xD;
+    * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse&#xD;
+    *      response)&#xD;
+    */&#xD;
+   protected void doPost(HttpServletRequest request,&#xD;
+         HttpServletResponse response) throws ServletException, IOException {&#xD;
+&#xD;
+   }&#xD;
+}</programlisting>
+   </foil>
+</slides>

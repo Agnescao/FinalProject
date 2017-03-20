@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>HomePage</title>
+<link rel="stylesheet" type="text/css" href="css/main2.css">
+
+</head>
+
+
+<body>
+	<div class="top"></div>
+	<div class="header">
+		<div class="logobar">
+			<a href="index.jsp" class="logo"><img alt="sporting goods"
+				src="../images/logo.PNG"></a>
+
+		</div>
+		<div class="searchbox">
+			<input type="text" class="search_text"> 
+			<input type="button" class="search_btn" value="Search">
+
+		</div>
+		<div id="nav_bar">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#.html">Product</a></li>
+				<li><a href="#.html" class="current"> SecondHand</a></li>
+				<li><a href="#.html">About Us</a></li>
+				<li><a href="#.html">Shopping Cart</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="main">
+		<c:if test="${sessionScope.user != null}">
+			Current user: <c:out value="${sessionScope.user.name}" />
+		</c:if>
+
+		<p>
+			<a href="register.jsp"> Register</a> <br>
+		<p>
+			<a href="login.jsp"> Login</a><br>
+		<p>
+			<a href="LogoutServlet"> Logout</a><br> <a
+				href="Page/register1.jsp"> Register</a> <br> <a
+				href="MainPage.jsp"> Login</a><br>
+		</p>
+	</div>
+
+	<div class="foot">
+		<p>&copy; 2016 Lei Cao</p>
+	</div>
+</body>
+
+
+</html>

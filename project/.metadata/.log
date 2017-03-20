@@ -1,0 +1,766 @@
+!SESSION 2015-11-01 21:09:01.346 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.core.runtime 2 0 2015-11-01 21:10:22.366
+!MESSAGE Authorization infrastructure (org.eclipse.core.runtime.compatibility.auth) not installed.
+!STACK 0
+java.lang.ClassNotFoundException: org.eclipse.core.internal.runtime.auth.AuthorizationDatabase cannot be found by org.eclipse.core.runtime_3.10.0.v20140318-2214
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:432)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.eclipse.core.internal.runtime.AuthorizationHandler.getAuthClass(AuthorizationHandler.java:48)
+	at org.eclipse.core.internal.runtime.AuthorizationHandler.loadKeyring(AuthorizationHandler.java:69)
+	at org.eclipse.core.internal.runtime.AuthorizationHandler.flushAuthorizationInfo(AuthorizationHandler.java:231)
+	at org.eclipse.core.runtime.Platform.flushAuthorizationInfo(Platform.java:590)
+	at com.atlassian.connector.eclipse.internal.commons.ui.MigrateToSecureStorageJob.migrateToSecureStorage(MigrateToSecureStorageJob.java:89)
+	at com.atlassian.connector.eclipse.internal.commons.ui.MigrateToSecureStorageJob.runInUIThread(MigrateToSecureStorageJob.java:60)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-01 21:10:25.898
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-01 21:10:25.899
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-11-03 09:51:34.951 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-03 09:52:56.626
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-03 09:52:56.654
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.servlet.ui 4 0 2015-11-03 09:53:51.475
+!MESSAGE SportingGoods does not exist
+!STACK 1
+Java Model Exception: Java Model Status [SportingGoods does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:544)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:565)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:294)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:280)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:235)
+	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:1854)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedJavaProject.getNonExternalSourceFolders(CompressedJavaProject.java:81)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedJavaProject.getJavaElement(CompressedJavaProject.java:106)
+	at org.eclipse.jst.servlet.ui.internal.navigator.CompressedNodeAdapterFactory.getAdapter(CompressedNodeAdapterFactory.java:30)
+	at org.eclipse.core.internal.runtime.AdapterManager.getAdapter(AdapterManager.java:326)
+	at org.eclipse.core.internal.runtime.AdapterManager.loadAdapter(AdapterManager.java:356)
+	at org.eclipse.ui.internal.LegacyResourceSupport.getAdapter(LegacyResourceSupport.java:622)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:264)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:367)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:349)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2015-11-03 09:53:51.496
+!MESSAGE SportingGoods does not exist
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 10:07:02.755
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@fb8adcf} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6cef2367}
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 10:52:43.154
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@fb8adcf} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6cef2367}
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 10:53:07.839
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@fb8adcf} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6cef2367}
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 10:55:10.366
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@fb8adcf} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6cef2367}
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 10:55:15.536
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@fb8adcf} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6cef2367}
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 10:58:45.732
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@fb8adcf} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6cef2367}
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 11:00:07.050
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@fb8adcf} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6cef2367}
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 11:00:49.891
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.refactor.quickMenu: {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@fb8adcf} vs {org.eclipse.jdt.internal.ui.actions.JDTQuickMenuCreator$1@6cef2367}
+
+!ENTRY org.eclipse.ui.workbench 4 2 2015-11-03 11:39:33.280
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.buildMethods(ClassScope.java:336)
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.buildFieldsAndMethods(ClassScope.java:182)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.buildFieldsAndMethods(CompilationUnitScope.java:84)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.completeTypeBindings(LookupEnvironment.java:302)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.accept(HierarchyResolver.java:168)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:176)
+	at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:201)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:3353)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:3060)
+	at org.eclipse.jdt.internal.compiler.ast.SingleTypeReference.getTypeBinding(SingleTypeReference.java:51)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.internalResolveType(TypeReference.java:473)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:580)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:576)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveSuperType(TypeReference.java:550)
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.findSupertype(ClassScope.java:1320)
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.connectSuperInterfaces(ClassScope.java:1071)
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.connectTypeHierarchy(ClassScope.java:1129)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.connectTypeHierarchy(CompilationUnitScope.java:393)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.completeTypeBindings(LookupEnvironment.java:324)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:823)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:630)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyBuilder.buildSupertypes(HierarchyBuilder.java:126)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:136)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:301)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1268)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:741)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:693)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:144)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:96)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getMethodOverrideTester(SuperTypeHierarchyCache.java:105)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.getOverrideIndicators(OverrideIndicatorLabelDecorator.java:171)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.computeAdornmentFlags(OverrideIndicatorLabelDecorator.java:136)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.decorate(OverrideIndicatorLabelDecorator.java:273)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:273)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:367)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:349)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 11:39:33.282
+!MESSAGE Exception in Decorator. The 'Java Method Override Indicator' decorator will be disabled.
+
+!ENTRY org.eclipse.ui 4 4 2015-11-03 11:39:33.283
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.buildMethods(ClassScope.java:336)
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.buildFieldsAndMethods(ClassScope.java:182)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.buildFieldsAndMethods(CompilationUnitScope.java:84)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.completeTypeBindings(LookupEnvironment.java:302)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.accept(HierarchyResolver.java:168)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:176)
+	at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:201)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:3353)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:3060)
+	at org.eclipse.jdt.internal.compiler.ast.SingleTypeReference.getTypeBinding(SingleTypeReference.java:51)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.internalResolveType(TypeReference.java:473)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:580)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveType(TypeReference.java:576)
+	at org.eclipse.jdt.internal.compiler.ast.TypeReference.resolveSuperType(TypeReference.java:550)
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.findSupertype(ClassScope.java:1320)
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.connectSuperInterfaces(ClassScope.java:1071)
+	at org.eclipse.jdt.internal.compiler.lookup.ClassScope.connectTypeHierarchy(ClassScope.java:1129)
+	at org.eclipse.jdt.internal.compiler.lookup.CompilationUnitScope.connectTypeHierarchy(CompilationUnitScope.java:393)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.completeTypeBindings(LookupEnvironment.java:324)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:823)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:630)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyBuilder.buildSupertypes(HierarchyBuilder.java:126)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:136)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:301)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1268)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:741)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:693)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:144)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:96)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getMethodOverrideTester(SuperTypeHierarchyCache.java:105)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.getOverrideIndicators(OverrideIndicatorLabelDecorator.java:171)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.computeAdornmentFlags(OverrideIndicatorLabelDecorator.java:136)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.decorate(OverrideIndicatorLabelDecorator.java:273)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:273)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:367)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:349)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2015-11-04 15:53:45.387 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-11-04 15:54:06.688
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-11-04 15:54:06.807
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-11-04 15:54:21.725
+!MESSAGE Connection to http://download.eclipse.org/releases/luna/p2.index failed on download.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2015-11-04 15:54:22.259
+!MESSAGE Unknown Host: http://download.eclipse.org/releases/luna/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-11-04 15:54:22.760
+!MESSAGE Connection to http://download.springsource.com/release/TOOLS/update/e4.4/p2.index failed on download.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-04 15:54:22.931
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-04 15:54:22.933
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2015-11-04 15:54:23.045
+!MESSAGE Unknown Host: http://download.springsource.com/release/TOOLS/update/e4.4/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.springsource.com
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2015-11-04 15:55:23.276
+!MESSAGE Exception while initializing all containers
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/r4registerLoginLogout' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:341)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:215)
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:147)
+	at org.eclipse.core.internal.resources.Resource.checkAccessibleAndLocal(Resource.java:221)
+	at org.eclipse.core.internal.resources.Resource.touch(Resource.java:1949)
+	at org.eclipse.core.internal.resources.Project.touch(Project.java:1403)
+	at org.eclipse.wst.jsdt.internal.core.SetContainerOperation.execute(SetContainerOperation.java:122)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.setJsGlobalScopeContainer(JavaScriptCore.java:3906)
+	at org.eclipse.wst.jsdt.launching.JREContainerInitializer.initialize(JREContainerInitializer.java:48)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2215)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager$6.run(JavaModelManager.java:2145)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2161)
+	at org.eclipse.wst.jsdt.internal.core.JavaModelManager.getJsGlobalScopeContainer(JavaModelManager.java:1536)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.getJsGlobalScopeContainer(JavaScriptCore.java:1324)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2747)
+	at org.eclipse.wst.jsdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2026)
+	at org.eclipse.wst.jsdt.core.JavaScriptCore.initializeAfterLoad(JavaScriptCore.java:2660)
+	at org.eclipse.wst.jsdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2015-11-04 15:55:23.276
+!MESSAGE Resource '/r4registerLoginLogout' does not exist.
+!SESSION 2015-11-09 12:09:37.349 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-09 12:12:14.533
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-09 12:12:14.595
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2015-11-09 12:19:24.800
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.texteditor.AbstractTextEditor$TextEditorSavable.isDirty(AbstractTextEditor.java:7213)
+	at org.eclipse.ui.internal.SaveableHelper.waitForBackgroundSaveJobs(SaveableHelper.java:490)
+	at org.eclipse.ui.internal.SaveablesList.promptForSaving(SaveablesList.java:467)
+	at org.eclipse.ui.internal.SaveablesList.promptForSavingIfNecessary(SaveablesList.java:434)
+	at org.eclipse.ui.internal.SaveablesList.preCloseParts(SaveablesList.java:389)
+	at org.eclipse.ui.internal.SaveablesList.preCloseParts(SaveablesList.java:348)
+	at org.eclipse.ui.internal.WorkbenchWindow$7.save(WorkbenchWindow.java:583)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.savePart(PartServiceImpl.java:1333)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1217)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$3(StackRenderer.java:1200)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$12.close(StackRenderer.java:1092)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1874)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:288)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2015-11-09 14:48:32.045 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-09 14:50:04.383
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-09 14:50:04.462
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-11-09 17:08:51.893
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2015-11-09 17:08:52.440
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1077)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1068)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1064)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:73)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2015-11-10 23:11:45.892 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-10 23:14:13.274
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-10 23:14:13.670
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-11-11 14:51:18.640 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-11 14:53:28.049
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-11 14:53:28.064
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-11-11 16:02:03.478 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-11 16:05:33.407
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-11 16:05:34.554
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ant.launching 4 120 2015-11-11 16:13:02.100
+!MESSAGE Error logged from Ant UI: 
+!STACK 0
+java.net.SocketTimeoutException: Accept timed out
+	at java.net.DualStackPlainSocketImpl.waitForNewConnection(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketAccept(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.accept(Unknown Source)
+	at java.net.PlainSocketImpl.accept(Unknown Source)
+	at java.net.ServerSocket.implAccept(Unknown Source)
+	at java.net.ServerSocket.accept(Unknown Source)
+	at org.eclipse.ant.internal.launching.launchConfigurations.RemoteAntBuildListener$ServerConnection.run(RemoteAntBuildListener.java:89)
+!SESSION 2015-11-11 17:02:58.279 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-11 17:03:51.109
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-11 17:03:51.125
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2015-11-12 09:29:01.323 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-11-12 09:29:30.573
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-12 09:30:06.097
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-11-12 09:30:06.097
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-02-03 14:12:58.845 -----------------------------------------------
+eclipse.buildId=3.6.4.201503100339-RELEASE-e44
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.springsource.ggts.ide -product org.springsource.ggts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springsource.ggts.ide -data F:\FinalProject\project -product org.springsource.ggts.ide
+
+!ENTRY org.eclipse.core.resources 4 567 2016-02-03 14:13:01.902
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2016-02-03 14:13:01.902
+!MESSAGE Could not read metadata for 'registerLoginLogout'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'registerLoginLogout' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:884)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:864)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:715)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1565)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2464)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2219)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:447)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:136)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2016-02-03 14:13:01.902
+!MESSAGE The project description file (.project) for 'registerLoginLogout' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-03 14:13:13.138
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-03 14:13:13.138
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Caolei'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.core.resources 4 567 2016-02-03 14:13:24.027
+!MESSAGE The project description file (.project) for 'registerLoginLogout' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.

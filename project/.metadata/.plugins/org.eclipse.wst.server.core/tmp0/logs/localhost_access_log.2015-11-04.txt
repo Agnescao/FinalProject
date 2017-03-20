@@ -1,0 +1,13 @@
+127.0.0.1 - - [04/Nov/2015:15:58:07 +0000] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:15:58:10 +0000] "GET /p4registerLoginLogout/ HTTP/1.1" 200 444
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:15:58:16 +0000] "GET /p4registerLoginLogout/register.jsp HTTP/1.1" 200 579
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:15:58:41 +0000] "POST /p4registerLoginLogout/RegisterServlet HTTP/1.1" 500 1511
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:16:06:43 +0000] "POST /p4registerLoginLogout/RegisterServlet HTTP/1.1" 200 444
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:16:06:44 +0000] "GET /p4registerLoginLogout/register.jsp HTTP/1.1" 200 579
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:16:06:53 +0000] "POST /p4registerLoginLogout/RegisterServlet HTTP/1.1" 200 444
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:16:07:07 +0000] "GET /p4registerLoginLogout/login.jsp HTTP/1.1" 200 510
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:16:07:15 +0000] "POST /p4registerLoginLogout/LoginServlet HTTP/1.1" 200 465
+127.0.0.1 - - [04/Nov/2015:16:14:40 +0000] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:16:14:41 +0000] "GET /p4registerLoginLogout/index.jsp HTTP/1.1" 200 444
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:16:14:47 +0000] "GET /p4registerLoginLogout/register.jsp HTTP/1.1" 200 579
+0:0:0:0:0:0:0:1 - - [04/Nov/2015:16:15:13 +0000] "POST /p4registerLoginLogout/RegisterServlet HTTP/1.1" 200 444

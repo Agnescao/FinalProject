@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<files name="Threads">
+	
+	<file name="../WebContent/index.jsp"/>
+	
+	<file name="../src/model/User.java"/>
+	
+	<file name="../src/dao/UserDAO.java"/>
+	
+	<file name="../WebContent/index.jsp"/>
+	
+	<file name="../WebContent/register.jsp"/>
+	
+	<file name="../src/controllers/RegisterServlet.java"/>
+	
+	<file name="../WebContent/login.jsp"/>
+	
+	<file name="../src/controllers/LoginServlet.java"/>
+	
+	<file name="../src/controllers/LogoutServlet.java"/>
+
+</files>

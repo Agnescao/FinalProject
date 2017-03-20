@@ -1,0 +1,66 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>../src/dao/UserDAO.java</title><link type="text/css" rel="stylesheet" href="../dbhtml/browser//slides-w3c.css"></link><link rel="contents" href="toc.html" title=""></link><link rel="top" href="index.html" title=""></link><link rel="first" href="index.html" title=""></link><link rel="up" href="index.html" title=""></link><link rel="previous" href="foil02.html" title="../src/model/User.java"></link><link rel="next" href="foil04.html" title="../WebContent/index.jsp"></link><link rel="last" href="foil09.html" title="../src/controllers/LogoutServlet.java"></link><script language="JavaScript1.2" type="text/javascript"> </script><script type="text/javascript" language="javascript" src="../dbhtml/browser//ua.js"> </script><script type="text/javascript" language="JavaScript" src="../dbhtml/browser//xbDOM.js"> </script><script type="text/javascript" language="javascript" src="../dbhtml/browser//xbStyle.js"> </script><script type="text/javascript" language="javascript" src="../dbhtml/browser//xbCollapsibleLists.js"> </script><script type="text/javascript" language="JavaScript" src="../dbhtml/browser//slides.js"> </script></head><body class="foil" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF" onkeypress="navigate(event)"><div class="foil"><a id="d0e17"></a><div class="navhead"><table class="navbar" cellspacing="0" cellpadding="0" border="0" width="97%" summary="Navigation buttons"><tr><td align="left" valign="top"></td><td valign="top" nowrap="nowrap" width="150"><div align="right"><a rel="previous" accesskey="P" href="foil02.html"><img border="0" width="32" height="32" alt=" Previous" title="../src/model/User.java" src="../dbhtml/graphics//active/w3c-prev.png"></img></a><a rel="contents" href="toc.html" accesskey="C"><img border="0" width="32" height="32" alt=" Contents" title="Table of Contents" src="../dbhtml/graphics//active/w3c-toc.png"></img></a><a rel="next" accesskey="N" href="foil04.html"><img border="0" width="32" height="32" alt=" Next" title="../WebContent/index.jsp" src="../dbhtml/graphics//active/w3c-next.png"></img></a></div></td></tr></table><h1 class="title">../src/dao/UserDAO.java</h1><hr class="top-nav-sep"></hr></div><div class="foil-body"><pre xmlns="" class="programlisting">package dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import model.User;
+
+public enum UserDAO {
+  instance;
+
+  public Connection getConnection() {
+
+    Connection connection = null;
+    try {
+      Class.forName("org.hsqldb.jdbcDriver");
+      connection = DriverManager.getConnection(
+          "jdbc:hsqldb:hsql://localhost/oneDB", "sa", "");
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return connection;
+  }
+
+  public void save(User user) {
+    Connection connection = getConnection();
+
+    try {
+      PreparedStatement psmt = connection
+          .prepareStatement("INSERT INTO USER (name, password, address) VALUES (?, ?, ?)");
+      psmt.setString(1, user.getName());
+      psmt.setString(2, user.getPassword());
+      psmt.setString(3, user.getAddress());
+
+      psmt.executeUpdate();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public User checkLogin(String name, String password) {
+    Connection connection = getConnection();
+    User user = null ;
+
+    try {
+      PreparedStatement psmt = connection
+          .prepareStatement("SELECT * FROM USER WHERE NAME = ? AND PASSWORD = ?");
+      psmt.setString(1, name);
+      psmt.setString(2, password);
+      ResultSet rs = psmt.executeQuery();
+      if (rs.next()) {
+        user = new User(rs.getInt("id"), rs.getString("name"), rs.getString("password"), rs.getString("address")) ;
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return user ;
+  }
+
+}</pre></div><div id="overlayDiv"><div class="navfoot"><hr class="bottom-nav-sep"></hr><table class="footer" cellspacing="0" cellpadding="0" border="0" width="97%" summary="footer"><tr><td align="left" valign="top"></td><td align="right" valign="top"><span class="index">3 of 9</span></td><td valign="top" nowrap="nowrap" width="150"><div align="right"><a rel="previous" accesskey="P" href="foil02.html"><img border="0" width="32" height="32" alt=" Previous" title="../src/model/User.java" src="../dbhtml/graphics//active/w3c-prev.png"></img></a><a rel="next" accesskey="N" href="foil04.html"><img border="0" width="32" height="32" alt=" Next" title="../WebContent/index.jsp" src="../dbhtml/graphics//active/w3c-next.png"></img></a></div></td></tr></table></div></div></div></body></html>

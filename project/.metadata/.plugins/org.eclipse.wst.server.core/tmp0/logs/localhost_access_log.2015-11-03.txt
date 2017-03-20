@@ -1,0 +1,5 @@
+127.0.0.1 - - [03/Nov/2015:10:32:09 +0000] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [03/Nov/2015:10:32:14 +0000] "GET /Sportting_Goods/WEB-INF/Home.jsp HTTP/1.1" 404 992
+127.0.0.1 - - [03/Nov/2015:10:32:47 +0000] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [03/Nov/2015:10:32:50 +0000] "GET /p4registerLoginLogout/index.jsp HTTP/1.1" 200 444
+0:0:0:0:0:0:0:1 - - [03/Nov/2015:10:32:58 +0000] "GET /p4registerLoginLogout/register.jsp HTTP/1.1" 200 579

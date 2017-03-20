@@ -1,0 +1,4 @@
+#Sat Feb 06 10:34:52 GMT 2016
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=stack trace

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;ShapePoly.java&apos; to &apos;Shape.java&apos;&#x0D;&#x0A;- Original project: &apos;interface&apos;&#x0D;&#x0A;- Original element: &apos;ShapePoly.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Shape.java&apos;" description="Rename compilation unit &apos;ShapePoly.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{ShapePoly.java" name="Shape.java" references="false" stamp="1446553635596" version="1.0"/>
+</session>

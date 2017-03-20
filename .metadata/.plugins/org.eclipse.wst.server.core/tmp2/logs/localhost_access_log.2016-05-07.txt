@@ -1,0 +1,13 @@
+127.0.0.1 - - [07/May/2016:08:48:36 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [07/May/2016:08:48:38 +0100] "GET /FinalProjectSportingGood-v1/ HTTP/1.1" 200 3518
+0:0:0:0:0:0:0:1 - - [07/May/2016:08:48:38 +0100] "GET /FinalProjectSportingGood-v1/imageproduct/indexP.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/May/2016:08:51:23 +0100] "GET /FinalProjectSportingGood-v1/login.jsp HTTP/1.1" 200 2192
+0:0:0:0:0:0:0:1 - - [07/May/2016:08:51:23 +0100] "GET /FinalProjectSportingGood-v1/css/login.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/May/2016:08:51:31 +0100] "POST /FinalProjectSportingGood-v1/LoginServlet HTTP/1.1" 200 3454
+127.0.0.1 - - [07/May/2016:09:18:41 +0100] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [07/May/2016:09:18:42 +0100] "GET /FinalProjectSportingGood-v1/ HTTP/1.1" 200 3518
+0:0:0:0:0:0:0:1 - - [07/May/2016:09:18:46 +0100] "GET /FinalProjectSportingGood-v1/register.jsp HTTP/1.1" 200 2429
+0:0:0:0:0:0:0:1 - - [07/May/2016:09:18:46 +0100] "GET /FinalProjectSportingGood-v1/js/ajax.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/May/2016:09:18:48 +0100] "GET /FinalProjectSportingGood-v1/exist.jsp?username= HTTP/1.1" 200 28
+0:0:0:0:0:0:0:1 - - [07/May/2016:09:18:55 +0100] "GET /FinalProjectSportingGood-v1/exist.jsp?username=Lei HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [07/May/2016:09:20:54 +0100] "GET /FinalProjectSportingGood-v1/login.jsp HTTP/1.1" 200 2192

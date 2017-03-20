@@ -1,0 +1,60 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>../src/controllers/LoginServlet.java</title><link type="text/css" rel="stylesheet" href="../dbhtml/browser//slides-w3c.css"></link><link rel="contents" href="toc.html" title=""></link><link rel="top" href="index.html" title=""></link><link rel="first" href="index.html" title=""></link><link rel="up" href="index.html" title=""></link><link rel="previous" href="foil07.html" title="../WebContent/login.jsp"></link><link rel="next" href="foil09.html" title="../src/controllers/LogoutServlet.java"></link><script language="JavaScript1.2" type="text/javascript"> </script><script type="text/javascript" language="javascript" src="../dbhtml/browser//ua.js"> </script><script type="text/javascript" language="JavaScript" src="../dbhtml/browser//xbDOM.js"> </script><script type="text/javascript" language="javascript" src="../dbhtml/browser//xbStyle.js"> </script><script type="text/javascript" language="javascript" src="../dbhtml/browser//xbCollapsibleLists.js"> </script><script type="text/javascript" language="JavaScript" src="../dbhtml/browser//slides.js"> </script></head><body class="foil" bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF" onkeypress="navigate(event)"><div class="foil"><a id="d0e42"></a><div class="navhead"><table class="navbar" cellspacing="0" cellpadding="0" border="0" width="97%" summary="Navigation buttons"><tr><td align="left" valign="top"></td><td valign="top" nowrap="nowrap" width="150"><div align="right"><a rel="previous" accesskey="P" href="foil07.html"><img border="0" width="32" height="32" alt=" Previous" title="../WebContent/login.jsp" src="../dbhtml/graphics//active/w3c-prev.png"></img></a><a rel="contents" href="toc.html" accesskey="C"><img border="0" width="32" height="32" alt=" Contents" title="Table of Contents" src="../dbhtml/graphics//active/w3c-toc.png"></img></a><a rel="next" accesskey="N" href="foil09.html"><img border="0" width="32" height="32" alt=" Next" title="../src/controllers/LogoutServlet.java" src="../dbhtml/graphics//active/w3c-next.png"></img></a></div></td></tr></table><h1 class="title">../src/controllers/LoginServlet.java</h1><hr class="top-nav-sep"></hr></div><div class="foil-body"><pre xmlns="" class="programlisting">package controllers;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.User;
+import dao.UserDAO;
+
+/**
+ * Servlet implementation class HelloControllerServlet
+ */
+@WebServlet("/LoginServlet")
+public class LoginServlet extends HttpServlet {
+   private static final long serialVersionUID = 1L;
+
+   /**
+    * @see HttpServlet#HttpServlet()
+    */
+   public LoginServlet() {
+      super();
+      // TODO Auto-generated constructor stub
+   }
+
+   /**
+    * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+    *      response)
+    */
+   protected void doGet(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+      // TOD
+   }
+
+   /**
+    * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+    *      response)
+    */
+   protected void doPost(HttpServletRequest request,
+         HttpServletResponse response) throws ServletException, IOException {
+      String name = request.getParameter("name");
+      String password = request.getParameter("password");
+      User user = UserDAO.instance.checkLogin(name, password);
+      if (user != null) {
+         HttpSession session = request.getSession();
+         session.setAttribute("user", user);
+         request.getRequestDispatcher("index.jsp").forward(request, response);
+      } else {
+         request.getRequestDispatcher("login.jsp").forward(request, response);
+      }
+   }
+
+}</pre></div><div id="overlayDiv"><div class="navfoot"><hr class="bottom-nav-sep"></hr><table class="footer" cellspacing="0" cellpadding="0" border="0" width="97%" summary="footer"><tr><td align="left" valign="top"></td><td align="right" valign="top"><span class="index">8 of 9</span></td><td valign="top" nowrap="nowrap" width="150"><div align="right"><a rel="previous" accesskey="P" href="foil07.html"><img border="0" width="32" height="32" alt=" Previous" title="../WebContent/login.jsp" src="../dbhtml/graphics//active/w3c-prev.png"></img></a><a rel="next" accesskey="N" href="foil09.html"><img border="0" width="32" height="32" alt=" Next" title="../src/controllers/LogoutServlet.java" src="../dbhtml/graphics//active/w3c-next.png"></img></a></div></td></tr></table></div></div></div></body></html>

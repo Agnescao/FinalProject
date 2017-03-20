@@ -1,0 +1,25 @@
+1457016312333	Rename type 'cartDAO'
+1457016354580	Rename type 'cart'
+1457043402590	Delete element
+1457080432077	Rename resource 'cart.jsp'
+1457200815460	Move 'Header.jsp' to 'WebContent'
+1457200821738	Delete element
+1457206259217	Move 12 resources to 'Page'
+1457206295183	Rename resource 'Page'
+1457206309104	Move 'pages' to 'WEB-INF'
+1457207123964	Delete element
+1457208120652	Delete element
+1457208127399	Delete element
+1457208167332	Move 'pages' to 'WebContent'
+1457208292619	Delete element
+1457208340777	Delete element
+1457209299992	Move 'category.jsp' to 'WebContent'
+1457209302682	Move 'checkout.jsp' to 'js'
+1457209325991	Move 9 resources to 'META-INF'
+1457209360193	Move 10 resources to 'WebContent'
+1457209370274	Move 'checkout.jsp' to 'WebContent'
+1457209670098	Copy files
+1457209773870	Copy compilation unit
+1457209792525	Copy packages
+1457214926364	Move 'MANIFEST.MF' to 'META-INF'
+1457214937741	Delete element
